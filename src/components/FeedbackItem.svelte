@@ -39,7 +39,9 @@
     border-radius: 50%;
     padding: 10px;
     text-align: center;
-    font-size: 19px;
+    font-size: 1.8rem;
+    display: grid;
+    place-content: center;
   }
 
   .close {
