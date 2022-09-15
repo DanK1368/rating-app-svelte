@@ -37,10 +37,18 @@
     average += curr.rating / feedback.length;
     return average;
   }, 0);
+
+  // add new feedback to existing feedback list
+  const addNewFeedback = e => {
+    const newFeedback = e.detail;
+    feedback = [newFeedback, ...feedback];
+  };
+
+  console.log(feedback);
 </script>
 
 <main class="container">
-  <FeedbackForm />
+  <FeedbackForm on:addNewFeedback={addNewFeedback} />
   <FeedbackStats {count} {averageRating} />
   <FeedbackList {feedback} on:delete-feedback={deleteFeedback} />
 </main>
